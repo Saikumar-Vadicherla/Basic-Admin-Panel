@@ -20,7 +20,7 @@ async function fetchData() {
 }
 
 fetchData().then((data) => {
-
+  console.log("data=======================",data);
 
   const infoContent = document.createElement("div");
   infoContent.setAttribute("id","info-content")
@@ -39,19 +39,7 @@ fetchData().then((data) => {
       `;
     
      
-      infoContent.innerHTML=
-      `<div><b>User selected:</b>${user.firstName} ${user.lastName}</div>
-      <div>
-          <b>Description: </b>
-          <textarea cols="50" rows="5" readonly>
-              ${user.description}
-          </textarea>
-      </div>
-      <div><b>Address:</b> ${user.address.streetAddress}</div>
-      <div><b>City:</b>   ${user.address.city}</div>
-      <div><b>State:</b>   ${user.address.state}</div>
-      <div><b>Zip:</b>  ${user.address.zip}</div>`
-    console.log( "infoContent.innerHTML------------",infoContent.innerHTML)
+     
     tRow.addEventListener("click", function(e) {
       infoContent.innerHTML=
       `<div><b>User selected:</b>${user.firstName} ${user.lastName}</div>
@@ -107,103 +95,3 @@ document.addEventListener("DOMContentLoaded", function() {
     location.reload();
   });
 });
-
-/* function filterUserData(searchInput) {
-  console.log("searchInput---", searchInput);
-  console.log("userList------", userList);
-  const tableRows = document.querySelectorAll('.data-row');
-  for (let i = 0; i < tableRows.length; i++) {
-    const row = tableRows[i];
-    const rowText = row.innerText.toLowerCase();
-    if (rowText.includes(searchInput.toLowerCase())) {
-      // row.classList.remove("hide");
-      row.style.backgroundColor = "lightseagreen";
-      row.innerText.style.color = "yellow";
-      row.style.border = "2px solid #808080";
-    } else {
-      // row.classList.add("hide");
-      row.style.backgroundColor = "transparent";
-      row.style.border = "none";
-      row.style.color ="black";
-    }
-  }
-} */
-
-
-
-
-/* function filterUserData(searchInput) {
-  console.log("searchInput---", searchInput)
-  console.log("userList------", userList)
-  for (let i = 0; i < userList.length; i++) {
-    const item = userList[i];
-    console.log("innerText============",innerText)
-    if (item.innerText.toLowerCase().includes(searchInput.toLowerCase())) { 
-      item.classList.remove("hide");
-      item.style.backgroundColor = "green";
-      
-    } else {
-      item.classList.add("hide");
-      item.style.backgroundColor = "transparent";
-    }
-  }
-}
-
-searchBox.addEventListener("input", function(e) {
-  console.log("saikumar", e);
-  // Add code to filter and display the data based on search term
-  filterUserData(e.target.value);
-});*/
-
-
-
-
-
-/* function filterUserData(searchInput) {
-    console.log("searchInput---", searchInput)
-    console.log("userList------", userList)
-    const tableRows = document.querySelectorAll('.data-row');
-    for (let i = 0; i < tableRows.length; i++) {
-      const row = tableRows[i];
-      const rowText = row.innerText.toLowerCase();
-      if (rowText.includes(searchInput.toLowerCase())) {
-        row.classList.remove("hide");
-        // item.style.backgroundColor = "green";
-      } else {
-        row.classList.add("hide");
-        // item.style.backgroundColor = "transparent";
-      }
-    }
-  }
-
-  
-  searchBox.addEventListener("input", function(e) {
-    console.log("saikumar", e);
-    // Add code to filter and display the data based on search term
-    filterUserData(e.target.value);
-  }); */
-  
-
-
-
-
-
-
-/* function filterUserData(searchInput){
-  console.log("searchInput---",searchInput)
-  console.log("userList------",userList)
-  userList.forEach(item=>{
-      if(item.innerText.toLowerCase().includes(searchInput.toLowerCase())){
-          item.classList.remove("hide")
-      }
-      else{
-          item.classList.add("hide")
-      }
-  })
-}
-
-searchBox.addEventListener("input", (e) => {
-  console.log("saikumar", e);
-  // Add code to filter and display the data based on search term
-  filterUserData(e.target.value)
-}); */
