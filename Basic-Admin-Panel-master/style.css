@@ -211,20 +211,8 @@ td {
 .column5 {
   width: 300px;
 }
-
-/* .active {
-  background-color: lightseagreen !important;
-} */
-
-/* .active td {
-  color: black;
-} */
-
  .tablebody tr.hide{
   display: none;
   color: white;
-/*   background-color: green; */
 }
-/* .data-row{
-  border: 3px solid blue;
-} */
+
